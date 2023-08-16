@@ -25,7 +25,7 @@
     ```
 # 참고 링크 및 코드 개선
     제 수준에서 개선할 부분은 보이지 않지만, 주석이 더 상세하게 있었다면 좋았을 것 같습니다. 다양한 조건에서의 모델을 구성한 것, 깔끔한 시각화가 돋보였고 시각화 단계에서의 모델 간 비교나 과적합 여부에 대한 분석이 인상적이었습니다.
-    > SentencePiece VS. KoNLPy 등 다른 모델들과 비교
+    >> SentencePiece VS. KoNLPy 등 다른 모델들과 비교
     > - SentencePiece 기본값인 unigram 보다 bpe 가 조금 나은 결과를 보여주었다.
     > - KoNLPy Mecab 형태소 분석기를 쓴 모델이 SentencePiece 모델 보다 조금 더 나은 결과가 나왔다.
     > - Mecab 을 쓴 데이터로 Word2Vector 를 거친 모델이 제일 좋은 결과를 보여주었다.
