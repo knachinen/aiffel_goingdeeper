@@ -26,14 +26,14 @@
 # 참고 링크 및 코드 개선
 제 수준에서 개선할 부분은 보이지 않지만, 주석이 더 상세하게 있었다면 좋았을 것 같습니다. 다양한 조건에서의 모델을 구성한 것, 깔끔한 시각화가 돋보였고 시각화 단계에서의 모델 간 비교나 과적합 여부에 대한 분석이 인상적이었습니다.
 > SentencePiece VS. KoNLPy 등 다른 모델들과 비교
-    > - SentencePiece 기본값인 unigram 보다 bpe 가 조금 나은 결과를 보여주었다.
-    > - KoNLPy Mecab 형태소 분석기를 쓴 모델이 SentencePiece 모델 보다 조금 더 나은 결과가 나왔다.
-    > - Mecab 을 쓴 데이터로 Word2Vector 를 거친 모델이 제일 좋은 결과를 보여주었다.
-    > - LSTM 128에서 64로 줄여보니 결과는 더 안좋아진다.
+- SentencePiece 기본값인 unigram 보다 bpe 가 조금 나은 결과를 보여주었다.
+- KoNLPy Mecab 형태소 분석기를 쓴 모델이 SentencePiece 모델 보다 조금 더 나은 결과가 나왔다.
+ - Mecab 을 쓴 데이터로 Word2Vector 를 거친 모델이 제일 좋은 결과를 보여주었다.
+ - LSTM 128에서 64로 줄여보니 결과는 더 안좋아진다.
 
-    > 과적합 
-    > - 전체적으로 과적합 양상이 보인다. 
-    > - Dropout 레이어를 0.1, 0.2 값으로 추가해봤는데, 전혀 학습이 되지 않았다.
-    > - L2, BatchNormalization, Dropout 추가: 학습은 되는데, 성능이 좋지 않다.
-    > - L2, BatchNormalization, Dropout 넣고 빼고 해본 결과 다 빼는 것이 제일 낫다.
-    > - SentencePiece 결과중에서는 단순하게 LSTM 128 레이어 하나만 가진 모델이 제일 좋은 결과를 보여주었다.
+ > 과적합 
+- 전체적으로 과적합 양상이 보인다.
+- Dropout 레이어를 0.1, 0.2 값으로 추가해봤는데, 전혀 학습이 되지 않았다.
+- L2, BatchNormalization, Dropout 추가: 학습은 되는데, 성능이 좋지 않다.
+- L2, BatchNormalization, Dropout 넣고 빼고 해본 결과 다 빼는 것이 제일 낫다.
+- SentencePiece 결과중에서는 단순하게 LSTM 128 레이어 하나만 가진 모델이 제일 좋은 결과를 보여주었다.
