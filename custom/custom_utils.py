@@ -2,6 +2,7 @@ import pickle
 import logging
 import os
 import datetime
+from joblib
 
 def ensure_directory_exists(directory: str) -> None:
     """
@@ -35,7 +36,8 @@ def save_var(var, name: str = "var") -> None:
 
     try:
         with open(file_path, 'wb') as f:
-            pickle.dump(var, f)
+            # pickle.dump(var, f)
+            joblib.dump(var, f)
             
         file_size = os.path.getsize(file_path) / (1024 ** 2)  # Get size in MB
         logging.info(f'Saved: {file_path} (Size: {file_size:.2f} MB)')
@@ -57,7 +59,8 @@ def load_var(name: str = "var"):
     
     try:
         with open(file_path, 'rb') as f:
-            var = pickle.load(f)
+            # var = pickle.load(f)
+            var = joblib.load(f)
         
         file_size = os.path.getsize(file_path) / (1024 ** 2)  # Get size in MB
         logging.info(f'Loaded: {file_path} (Size: {file_size:.2f} MB)')
